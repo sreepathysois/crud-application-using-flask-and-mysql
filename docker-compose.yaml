@@ -3,6 +3,8 @@ version: '2'
 services:
   phonebook-mysql:
     container_name: phonebook-mysql
+     volumes:
+       - crud_db_data:/var/lib/mysql
     build:
       context: .
       dockerfile: Dockerfile-mysql
@@ -18,3 +20,6 @@ services:
     ports:
       - "8181:8181"
     restart: always
+    
+volumes:
+    crud_db_data:
