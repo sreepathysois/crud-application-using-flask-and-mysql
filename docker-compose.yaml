@@ -22,4 +22,4 @@ services:
     restart: always
     
 volumes:
-    crud_db_data:
+   crud_db_data:
